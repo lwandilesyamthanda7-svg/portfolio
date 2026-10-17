@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lwandile - Frontend Developer & Database Practitioner</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-hover: #0ea5e9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background-color: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 5% 5rem 5%;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 span {
+            color: var(--accent-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+
+        .skill-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #334155;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+        }
+
+        .project-info h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .project-info p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-muted);
+            border-top: 1px solid #334155;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">DevPortfolio</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            
+        </nav>
+    </header>
+
+    <hero class="hero">
+        <h1>Hi, I'm <span>Lwandile</span></h1>
+        <p>Frontend Web Developer & Database Practitioner building clean, responsive interfaces and structured, data-driven applications.</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </hero>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto; color: var(--text-muted);">
+            I specialize in combining modern frontend development (HTML, CSS, JavaScript) with solid database foundations using SQL Server and SSMS. I love transforming user requirements into clean, functional web experiences backed by reliable data structures.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>My Toolkit</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Frontend Development</h3>
+                <p>HTML5, CSS3, JavaScript (ES6+), Responsive Web Design, and UI Interactivity.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Database Management</h3>
+                <p>SQL Server, SSMS, Database Design, Schema Setup, and Efficient Query Writing.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Tools & Workflow</h3>
+                <p>Git, GitHub, Version Control, Debugging, and Problem Solving.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Data Reporting Dashboard</h3>
+                    <p>A responsive frontend interface displaying organized data tables and query results.</p>
+                    <a href="#" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Code</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Customer Management Portal</h3>
+                    <p>A multi-form web interface handling dynamic record searching and user management.</p>
+                    <a href="#" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Code</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Business Landing Page</h3>
+                    <p>A modern, high-converting product landing page optimized for mobile and desktop screens.</p>
+                    <a href="#" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Code</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="text-align: center;">
+        <h2>Get In Touch</h2>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Have a project in mind or want to work together? Let's talk.</p>
+        <a href="mailto:your.email@example.com" class="btn">Send Me an Email</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Lwandile. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
